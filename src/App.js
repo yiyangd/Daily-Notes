@@ -56,7 +56,7 @@ function Loader() {
 }
 
 function Header({ showForm, setShowForm }) {
-  const appTitle = "Today I Learned:";
+  const appTitle = "Notes I Took";
 
   return (
     <header className="header">
@@ -69,7 +69,7 @@ function Header({ showForm, setShowForm }) {
         className="btn btn-large btn-open"
         onClick={() => setShowForm((show) => !show)} // 3. update state variable
       >
-        {showForm ? "Close" : "Share a fact"}
+        {showForm ? "Close" : "Ask a Question"}
       </button>
     </header>
   );
@@ -147,7 +147,7 @@ function NewFactForm({ setFacts, setShowForm }) {
     <form className="fact-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Share a fact with the world..."
+        placeholder="Ask a question..."
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={isUploading}
@@ -155,7 +155,7 @@ function NewFactForm({ setFacts, setShowForm }) {
       <span>{200 - textLength}</span>
       <input
         type="text"
-        placeholder="Trustworthy source..."
+        placeholder="Notes Link..."
         value={source}
         onChange={(e) => setSource(e.target.value)}
         disabled={isUploading}
@@ -276,7 +276,7 @@ function Fact({ fact, setFacts }) {
           🤯 {fact.votesMindblowing}
         </button>
         <button onClick={() => handleVote("votesFalse")} disabled={isUpdating}>
-          ⛔️ {fact.votesFalse}
+          ❓ {fact.votesFalse}
         </button>
       </div>
     </li>
