@@ -20,7 +20,7 @@ function App() {
           query = query.eq("category", currentCategory);
 
         let { data: notes, error } = await query
-          .order("votesInteresting", { ascending: false })
+          .order("created_at", { ascending: false })
           .limit(1000);
 
         if (!error) setFacts(notes);
@@ -80,10 +80,10 @@ const CATEGORIES = [
   { name: "stat-learning", color: "#16a34a" },
   { name: "discrete-math", color: "#ef4444" },
   { name: "probability", color: "#eab308" },
-  { name: "entertainment", color: "#db2777" },
-  { name: "health", color: "#14b8a6" },
-  { name: "history", color: "#f97316" },
-  { name: "news", color: "#8b5cf6" },
+  { name: "robotics", color: "#db2777" },
+  { name: "rgbd-sensor", color: "#14b8a6" },
+  { name: "stochastic-process", color: "#f97316" },
+  { name: "linear-algebra", color: "#8b5cf6" },
 ];
 
 function isValidHttpUrl(string) {
