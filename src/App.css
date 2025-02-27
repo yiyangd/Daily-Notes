@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-list {
+  order: 1;
+}
+
+.category-filter {
+  order: 0;
+}
+
+@media (max-width: 768px) {
+  .fact-list {
+    order: 0;
+  }
+  
+  .category-filter {
+    order: 1;
+  }
+} 

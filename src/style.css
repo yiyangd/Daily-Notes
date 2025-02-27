@@ -251,3 +251,13 @@ ul {
     width: auto;
   }
 }
+
+@media (max-width: 768px) {
+  aside {
+    display: none;
+  }
+  
+  .facts-list {
+    grid-template-columns: 1fr;
+  }
+}
